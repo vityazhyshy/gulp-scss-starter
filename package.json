@@ -45,6 +45,7 @@
         "gulp-debug": "^4.0.0",
         "gulp-favicons": "^3.0.0",
         "gulp-file-include": "^2.3.0",
+        "gulp-format-html": "^2.2.0",
         "gulp-group-css-media-queries": "^1.2.2",
         "gulp-if": "^3.0.0",
         "gulp-imagemin": "^7.1.0",
