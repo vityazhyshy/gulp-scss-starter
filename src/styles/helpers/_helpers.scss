@@ -1,0 +1,298 @@
+/* Helper CSS */
+[role=button]:focus {
+    outline: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  & > .col, & > .col-1, & > .col-10, & > .col-11, & > .col-12, & > .col-2, & > .col-3, & > .col-4, & > .col-5, & > .col-6, & > .col-7, & > .col-8, & > .col-9, & > .col-auto, & > .col-lg, & > .col-lg-1, & > .col-lg-10, & > .col-lg-11, & > .col-lg-12, & > .col-lg-2, & > .col-lg-3, & > .col-lg-4, & > .col-lg-5, & > .col-lg-6, & > .col-lg-7, & > .col-lg-8, & > .col-lg-9, & > .col-lg-auto, & > .col-md, & > .col-md-1, & > .col-md-10, & > .col-md-11, & > .col-md-12, & > .col-md-2, & > .col-md-3, & > .col-md-4, & > .col-md-5, & > .col-md-6, & > .col-md-7, & > .col-md-8, & > .col-md-9, & > .col-md-auto, & > .col-sm, & > .col-sm-1, & > .col-sm-10, & > .col-sm-11, & > .col-sm-12, & > .col-sm-2, & > .col-sm-3, & > .col-sm-4, & > .col-sm-5, & > .col-sm-6, & > .col-sm-7, & > .col-sm-8, & > .col-sm-9, & > .col-sm-auto, & > .col-xl, & > .col-xl-1, & > .col-xl-10, & > .col-xl-11, & > .col-xl-12, & > .col-xl-2, & > .col-xl-3, & > .col-xl-4, & > .col-xl-5, & > .col-xl-6, & > .col-xl-7, & > .col-xl-8, & > .col-xl-9, & > .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  &.no-gutters {
+    margin-right: 0rem;
+    margin-left: 0rem;
+    & > .col, & > .col-1, & > .col-10, & > .col-11, & > .col-12, & > .col-2, & > .col-3, & > .col-4, & > .col-5, & > .col-6, & > .col-7, & > .col-8, & > .col-9, & > .col-auto, & > .col-lg, & > .col-lg-1, & > .col-lg-10, & > .col-lg-11, & > .col-lg-12, & > .col-lg-2, & > .col-lg-3, & > .col-lg-4, & > .col-lg-5, & > .col-lg-6, & > .col-lg-7, & > .col-lg-8, & > .col-lg-9, & > .col-lg-auto, & > .col-md, & > .col-md-1, & > .col-md-10, & > .col-md-11, & > .col-md-12, & > .col-md-2, & > .col-md-3, & > .col-md-4, & > .col-md-5, & > .col-md-6, & > .col-md-7, & > .col-md-8, & > .col-md-9, & > .col-md-auto, & > .col-sm, & > .col-sm-1, & > .col-sm-10, & > .col-sm-11, & > .col-sm-12, & > .col-sm-2, & > .col-sm-3, & > .col-sm-4, & > .col-sm-5, & > .col-sm-6, & > .col-sm-7, & > .col-sm-8, & > .col-sm-9, & > .col-sm-auto, & > .col-xl, & > .col-xl-1, & > .col-xl-10, & > .col-xl-11, & > .col-xl-12, & > .col-xl-2, & > .col-xl-3, & > .col-xl-4, & > .col-xl-5, & > .col-xl-6, & > .col-xl-7, & > .col-xl-8, & > .col-xl-9, & > .col-xl-auto {
+      position: relative;
+      width: 100%;
+      padding-right: 0rem;
+      padding-left: 0rem;
+    }
+  }
+}
+
+
+.row-closely {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.3rem;
+  margin-left: -.3rem;
+  & > .col, & > .col-1, & > .col-10, & > .col-11, & > .col-12, & > .col-2, & > .col-3, & > .col-4, & > .col-5, & > .col-6, & > .col-7, & > .col-8, & > .col-9, & > .col-auto, & > .col-lg, & > .col-lg-1, & > .col-lg-10, & > .col-lg-11, & > .col-lg-12, & > .col-lg-2, & > .col-lg-3, & > .col-lg-4, & > .col-lg-5, & > .col-lg-6, & > .col-lg-7, & > .col-lg-8, & > .col-lg-9, & > .col-lg-auto, & > .col-md, & > .col-md-1, & > .col-md-10, & > .col-md-11, & > .col-md-12, & > .col-md-2, & > .col-md-3, & > .col-md-4, & > .col-md-5, & > .col-md-6, & > .col-md-7, & > .col-md-8, & > .col-md-9, & > .col-md-auto, & > .col-sm, & > .col-sm-1, & > .col-sm-10, & > .col-sm-11, & > .col-sm-12, & > .col-sm-2, & > .col-sm-3, & > .col-sm-4, & > .col-sm-5, & > .col-sm-6, & > .col-sm-7, & > .col-sm-8, & > .col-sm-9, & > .col-sm-auto, & > .col-xl, & > .col-xl-1, & > .col-xl-10, & > .col-xl-11, & > .col-xl-12, & > .col-xl-2, & > .col-xl-3, & > .col-xl-4, & > .col-xl-5, & > .col-xl-6, & > .col-xl-7, & > .col-xl-8, & > .col-xl-9, & > .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: .3rem;
+    padding-left: .3rem;
+  }
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+::-moz-selection {
+    color: $white-color;
+    background: $green-color;
+    text-shadow: none;
+}
+::selection {
+    color: $white-color;
+    background: $green-color;
+    text-shadow: none;
+}
+img::-moz-selection {
+    color: $black-color;
+    background: transparent;
+}
+img::selection {
+    color: $black-color;
+    background: transparent;
+}
+img::-moz-selection {
+    color: $black-color;
+    background: transparent;
+}
+
+a.active.focus,
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+outline: 0!important;
+outline-color: transparent!important;
+outline-width: 0!important;
+outline-style: none!important;
+box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+}
+.gray-bg {
+    background-color: $gray-bg;
+}
+.blue-bg {
+  background-color: $blue-color;
+}
+.green-bg {
+  background-color: $green-color;
+}
+.text-white,
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: $white-color !important;
+}
+.text-black,
+.text-black h1,
+.text-black h2,
+.text-black h3,
+.text-black h4,
+.text-black h5,
+.text-black h6,
+.text-black p,
+.text-black span,
+.text-black li,
+.text-black a {
+	color: $black-color !important;
+}
+.text-blue,
+.text-blue h1,
+.text-blue h2,
+.text-blue h3,
+.text-blue h4,
+.text-blue h5,
+.text-blue h6,
+.text-blue p,
+.text-blue span,
+.text-blue li,
+.text-blue a {
+	color: $blue-color !important;
+}
+.text-lightblue,
+.text-lightblue h1,
+.text-lightblue h2,
+.text-lightblue h3,
+.text-lightblue h4,
+.text-lightblue h5,
+.text-lightblue h6,
+.text-lightblue p,
+.text-lightblue span,
+.text-lightblue li,
+.text-lightblue a {
+	color: $lightblue-color !important;
+}
+.text-red,
+.text-red h1,
+.text-red h2,
+.text-red h3,
+.text-red h4,
+.text-red h5,
+.text-red h6,
+.text-red p,
+.text-red span,
+.text-red li,
+.text-red a {
+	color: $red-color !important;
+}
+.text-green,
+.text-green h1,
+.text-green h2,
+.text-green h3,
+.text-green h4,
+.text-green h5,
+.text-green h6,
+.text-green p,
+.text-green span,
+.text-green li,
+.text-green a {
+	color: $green-color !important;
+}
+.text-yellow,
+.text-yellow h1,
+.text-yellow h2,
+.text-yellow h3,
+.text-yellow h4,
+.text-yellow h5,
+.text-yellow h6,
+.text-yellow p,
+.text-yellow span,
+.text-yellow li,
+.text-yellow a {
+	color: $yellow-color !important;
+}
+.text-gray,
+.text-gray h1,
+.text-gray h2,
+.text-gray h3,
+.text-gray h4,
+.text-gray h5,
+.text-gray h6,
+.text-gray p,
+.text-gray span,
+.text-gray li,
+.text-gray a {
+	color: $darkgray-color !important;
+}
+.text-purple,
+.text-purple h1,
+.text-purple h2,
+.text-purple h3,
+.text-purple h4,
+.text-purple h5,
+.text-purple h6,
+.text-purple p,
+.text-purple span,
+.text-purple li,
+.text-purple a {
+	color: $purple-color !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-600 {
+    font-weight: 600 !important;
+}
+.fw-700 {
+    font-weight: 700 !important;
+}
+.fw-800 {
+    font-weight: 800 !important;
+}
+.fw-900 {
+    font-weight: 900 !important;
+}
+.break-word {
+    word-spacing: 999999999999999px;
+}
+.fs-30 {
+    font-size: 3rem !important;
+}
+.fs-25 {
+    font-size: 2.5rem !important;
+}
+.fs-20 {
+    font-size: 2rem !important;
+}
+.fs-15 {
+    font-size: 1.5rem !important;
+}
+.fs-14 {
+    font-size: 1.4rem !important;
+}
+.fs-13 {
+    font-size: 1.3rem !important;
+}
+.fs-12 {
+    font-size: 1.2rem !important;
+}
+.fs-11 {
+    font-size: 1.1rem !important;
+}
+.fs-09 {
+    font-size: .9rem !important;
+}
+.fs-08 {
+    font-size: .8rem !important;
+}
+.fs-07 {
+    font-size: .7rem !important;
+}
+.fs-06 {
+    font-size: .6rem !important;
+}
+.fs-05 {
+    font-size: .5rem !important;
+}
+
+.slick-slide {
+    &:focus, a {
+        outline: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .sticky-block {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5rem;
+      min-height: 3rem;
+      margin-bottom: 2.5rem;
+    }
+}
