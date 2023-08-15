@@ -136,7 +136,7 @@ blocks
 Для создания спрайтов изображения ```.svg``` должны находиться в папке ```src/img/sprites```. Например, у нас есть файлы ```icon-1.svg```, ```icon-2.svg``` и ```icon-3.svg```, и мы должны обратиться к ```icon-2.svg```. Для этого в HTML нужно воспользоваться тегом ```<use>```:
 ```html
 <svg>
-    <use xlink:href="img/sprites/sprite.svg#logo"></use>
+    <use xlink:href="img/sprites/sprite.svg#icon-2.svg"></use>
 </svg>
 ```
 Изменить стили svg-иконки из спрайта в CSS:
@@ -157,7 +157,7 @@ svg use {
   <path d="M4.90918 4.04542L13.091 9.54088L4.90918 14.9545L4.90918 4.04542Z"/>
 </svg> 
 ```
-
+Также иконки желательно прогнать через сайт [SVGOMG](https://jakearchibald.github.io/svgomg/)
 ### Сторонние библиотеки
 * все сторонние библиотеки устанавливаются в папку ```node_modules```
     * для их загрузки воспользуйтеcь командой ```yarn add package_name``` (например, ```yarn add jquery```)
