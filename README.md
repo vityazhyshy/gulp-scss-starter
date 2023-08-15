@@ -20,7 +20,7 @@
     * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
     * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
     * [Bem Tools](https://www.npmjs.com/package/bem-tools-core): ```npm i -g bem-tools-core```
-* скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/andreyalexeich/gulp-scss-starter.git```
+* скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/vityazhyshy/gulp-scss-starter.git```
 * перейдите в скачанную папку со сборкой: ```cd gulp-scss-starter```
 * введите ```yarn set version berry```
 * скачайте необходимые зависимости: ```yarn```
