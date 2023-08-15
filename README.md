@@ -159,6 +159,163 @@ svg use {
 </svg> 
 ```
 Также иконки желательно прогнать через сайт [SVGOMG](https://jakearchibald.github.io/svgomg/)
+### SCSS файлы
+
+Рекомендации:
+
+- все "hex", "rgb", 'rgba", "hsl" и "hwb" цвета задаются только CSS переменным в
+  файле `src/styles/base/_root.scss`
+- так же рекомендуется задавать и использовать другие CSS переменные для общих стилей, таких
+  как `box-shadow`, `font-size`, `font-weight` и др.
+- используйте готовую SCSS-функцию `rem` для перевода значения PX в REM
+  - для всех значений;
+  - исключения: `border`, `box-shadow`, `background-size`, `max-width`
+  - в зависимости от ситуации: `transform`, `width`, `height`
+
+Контрольные точки (Breakpoints):
+
+| Breakpoint              | Class infix | Dimensions |
+| ----------------------- | ----------- | ---------- |
+| Extra small             | None        | <480px     |
+| Small                   | `sm`        | ≥480px     |
+| Medium                  | `md`        | ≥768px     |
+| Large                   | `lg`        | ≥992px     |
+| Extra large             | `xl`        | ≥1280px    |
+| Extra extra large       | `xxl`       | ≥1536px    |
+| Extra extra extra large | `xxxl`      | ≥1920px    |
+
+Эти точки можно настроить в файле `src/styles/base/_mixins.scss`
+
+<a id="minWidth" name="minWidth"></a>
+
+#### Min-width
+
+```scss
+// Для точки останова xs не требуется медиа-запрос, поскольку он фактически `@media (min-width: 0) { ... }`
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
+
+// Применение
+
+// Пример: скрыть, начиная с `min-width: 0`, а затем показать в точке останова `sm`
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
+```
+
+Эти миксины Sass транслируются в наш скомпилированный CSS с использованием значений, объявленных в
+наших переменных Sass. Например:
+
+```scss
+@media (min-width: 480px) {
+  ...
+}
+
+@media (min-width: 768px) {
+  ...
+}
+
+@media (min-width: 992px) {
+  ...
+}
+
+@media (min-width: 1280px) {
+  ...
+}
+
+@media (min-width: 1536px) {
+  ...
+}
+```
+
+<br>
+
+<a id="maxWidth" name="maxWidth"></a>
+
+#### Max-width
+
+```scss
+// Для точки останова xs не требуется медиа-запрос, поскольку он фактически `@media (min-width: 0) { ... }`
+@include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-down(md) { ... }
+@include media-breakpoint-down(lg) { ... }
+@include media-breakpoint-down(xl) { ... }
+@include media-breakpoint-down(xxl) { ... }
+
+// Применение
+
+// Пример: Стиль от средней точки останова и вниз
+@include media-breakpoint-down(md) {
+  .custom-class {
+    display: block;
+  }
+}
+```
+
+Эти миксины Sass транслируются в наш скомпилированный CSS с использованием значений, объявленных в
+наших переменных Sass. Например:
+
+```scss
+@media (max-width: 479.98px) {
+  ...
+}
+
+@media (max-width: 767.98px) {
+  ...
+}
+
+@media (max-width: 991.98px) {
+  ...
+}
+
+@media (max-width: 1279.98px) {
+  ...
+}
+
+@media (max-width: 1535.98px) {
+  ...
+}
+```
+
+<br>
+
+<a id="betweenBreakpoints" name="betweenBreakpoints"></a>
+
+#### Between breakpoints
+
+Точно так же медиа-запросы могут охватывать несколько точек останова по ширине:
+
+```scss
+@include media-breakpoint-between(md, xl) {
+  ...
+}
+```
+
+Что приводит к:
+
+```scss
+@media (min-width: 768px) and (max-width: 1279.98px) {
+  ...
+}
+```
+
+<a id="templateEngine" name="templateEngine"></a>
+
+## Шаблонизатор _gulp-file-include_
+
+В проекте присутствует шаблонизатор, который помогает соединять несколько html файлов в один
+через `@@include` и другое.
+Подробнее [здесь](https://github.com/haoxins/gulp-file-include/blob/main/Readme.md).
+
+<a id="libraries" name="libraries"></a>
 ### Сторонние библиотеки
 * все сторонние библиотеки устанавливаются в папку ```node_modules```
     * для их загрузки воспользуйтеcь командой ```yarn add package_name``` (например, ```yarn add jquery```)
