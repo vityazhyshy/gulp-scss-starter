@@ -9,7 +9,7 @@
 * именование классов по [БЭМ](https://ru.bem.info/)
 * используется БЭМ-структура
 * используется препроцессор [SCSS](https://sass-lang.com/)
-* используется [gulp-format-html]([https://sass-lang.com/](https://www.npmjs.com/package/gulp-format-html))
+* используется [gulp-format-html]([[https://sass-lang.com/](https://www.npmjs.com/package/gulp-format-html)])
 * используется транспайлер [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах
 * используется [Webpack](https://webpack.js.org/) для сборки JavaScript-модулей
 * используется жёсткий кодгайд
