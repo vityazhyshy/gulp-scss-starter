@@ -161,17 +161,6 @@ svg use {
 Также иконки желательно прогнать через сайт [SVGOMG](https://jakearchibald.github.io/svgomg/)
 ### SCSS файлы
 
-Рекомендации:
-
-- все "hex", "rgb", 'rgba", "hsl" и "hwb" цвета задаются только CSS переменным в
-  файле `src/styles/base/_root.scss`
-- так же рекомендуется задавать и использовать другие CSS переменные для общих стилей, таких
-  как `box-shadow`, `font-size`, `font-weight` и др.
-- используйте готовую SCSS-функцию `rem` для перевода значения PX в REM
-  - для всех значений;
-  - исключения: `border`, `box-shadow`, `background-size`, `max-width`
-  - в зависимости от ситуации: `transform`, `width`, `height`
-
 Контрольные точки (Breakpoints):
 
 | Breakpoint              | Class infix | Dimensions |
@@ -184,7 +173,7 @@ svg use {
 | Extra extra large       | `xxl`       | ≥1536px    |
 | Extra extra extra large | `xxxl`      | ≥1920px    |
 
-Эти точки можно настроить в файле `src/styles/base/_mixins.scss`
+Эти точки можно настроить в файле `src/styles/base/helpers/_mixins.scss`
 
 <a id="minWidth" name="minWidth"></a>
 
