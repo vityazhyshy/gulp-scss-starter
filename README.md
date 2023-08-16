@@ -137,7 +137,7 @@ blocks
 Для создания спрайтов изображения ```.svg``` должны находиться в папке ```src/img/sprites```. Например, у нас есть файлы ```icon-1.svg```, ```icon-2.svg``` и ```icon-3.svg```, и мы должны обратиться к ```icon-2.svg```. Для этого в HTML нужно воспользоваться тегом ```<use>```:
 ```html
 <svg>
-    <use xlink:href="img/sprites/sprite.svg#icon-2.svg"></use>
+    <use xlink:href="img/sprites/sprite.svg#icon-2"></use>
 </svg>
 ```
 Изменить стили svg-иконки из спрайта в CSS:
