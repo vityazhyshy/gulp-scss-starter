@@ -312,6 +312,11 @@ svg use {
     ```javascript
     import $ from "jquery";
     ```
+    или
+    ```javascript
+    import bootstrap from "bootstrap/dist/js/bootstrap.bundle";
+    ```
+    если подключаем Bootstrap.
     * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
     * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
 
