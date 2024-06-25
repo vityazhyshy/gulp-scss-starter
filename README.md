@@ -16,7 +16,7 @@
 * используется проверка кода на ошибки перед коммитом
 
 ## :hammer_and_wrench: Установка
-* установите [NodeJS](https://nodejs.org/en/)
+* установите [NodeJS](https://nodejs.org/en/) 18 версии через NVM
 * установите глобально:
     * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
     * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
