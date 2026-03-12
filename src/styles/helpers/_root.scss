@@ -1,0 +1,109 @@
+:root {
+  --font-primary: "Onest", sans-serif;
+  --font-heading: "Onest", sans-serif;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: #e3395d;
+  --color-blue: #0f75bd;
+  --color-purple: #885fa4;
+  --color-purple-light: #9d81b9;
+  --color-lightblue: #2d97c3;
+  --color-yellow: #fec953;
+  --color-green: #00875f;
+  --color-gray: #bcbdc0;
+  --color-gray-bg: #fafafc;
+  --color-darkgray: #808285;
+  --color-gray-text: #a5a6a8;
+  --color-text: #333333;
+  --color-footer: #fafafa;
+
+  --header-height: 5rem;
+  --main-screen-height: 6rem;
+  --section-padding-top: 5rem;
+  --section-padding-top-resp: 3rem;
+}
+
+$primary-font: var(--font-primary);
+$heading-font: var(--font-heading);
+
+$black-color: var(--color-black);
+$white-color: var(--color-white);
+$red-color: var(--color-red);
+$blue-color: var(--color-blue);
+$purple-color: var(--color-purple);
+$purple-color-light: var(--color-purple-light);
+$lightblue-color: var(--color-lightblue);
+$yellow-color: var(--color-yellow);
+$green-color: var(--color-green);
+$gray-color: var(--color-gray);
+$gray-bg: var(--color-gray-bg);
+$darkgray-color: var(--color-darkgray);
+$gray-text: var(--color-gray-text);
+$text-color: var(--color-text);
+$footer-color: var(--color-footer);
+
+$header-height: var(--header-height);
+$mainScreenHeight: var(--main-screen-height);
+$section-padding-top: var(--section-padding-top);
+$section-padding-top-resp: var(--section-padding-top-resp);
+
+$breakpoints-xs: 0;
+$breakpoints-sm: 480px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1280px;
+$breakpoints-xxl: 1536px;
+$breakpoints-xxxl: 1920px;
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1536px,
+  xxxl: 1920px,
+);
+
+@mixin media-breakpoint-up($name, $grid-breakpoints: $breakpoints) {
+  @if map-has-key($grid-breakpoints, $name) {
+    $min: map-get($grid-breakpoints, $name);
+
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$name}.";
+  }
+}
+
+@mixin media-breakpoint-down($name, $grid-breakpoints: $breakpoints) {
+  @if map-has-key($grid-breakpoints, $name) {
+    $max: map-get($grid-breakpoints, $name);
+
+    @media (max-width: ($max - 0.98)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$name}.";
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper, $grid-breakpoints: $breakpoints) {
+  @if map-has-key($grid-breakpoints, $lower) and map-has-key($grid-breakpoints, $upper) {
+    $min: map-get($grid-breakpoints, $lower);
+    $max: map-get($grid-breakpoints, $upper);
+
+    @media (min-width: $min) and (max-width: ($max - 0.98)) {
+      @content;
+    }
+  } @else {
+    @if map-has-key($grid-breakpoints, $lower) == false {
+      @warn "Your lower breakpoint was invalid: #{$lower}.";
+    }
+
+    @if map-has-key($grid-breakpoints, $upper) == false {
+      @warn "Your upper breakpoint was invalid: #{$upper}.";
+    }
+  }
+}
